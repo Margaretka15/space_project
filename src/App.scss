@@ -1,18 +1,6 @@
 @import "./style/base/mixins.scss";
 
 .App {
-  height: 100vh;
-
-  @include respond(desktop) {
-    background-image: url("../public/assets/home/background-home-desktop.jpg");
-  }
-  @include respond(tablet) {
-    background-image: url("../public/assets/home/background-home-tablet.jpg");
-  }
-  @include respond(phone) {
-    background-image: url("../public/assets/home/background-home-mobile.jpg");
-  }
-
 
   //
 

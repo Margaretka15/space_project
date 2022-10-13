@@ -1,6 +1,6 @@
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       @content
     };
   }
@@ -15,3 +15,7 @@
     };
   }
 }
+
+/// The given designs included background images for only three different devices
+// therefore only three breakpoints have been used.
+// Can be rewritten later if necessary :)

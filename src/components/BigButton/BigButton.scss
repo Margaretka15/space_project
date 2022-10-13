@@ -1,0 +1,37 @@
+@import "../../style/base/variables";
+
+.button--big {
+  position: relative;
+  width: 27rem;
+  height: 27rem;
+  color: $dark-blue;
+  text-transform: uppercase;
+  background-color: $white;
+  border-radius: 50%;
+  z-index: 2;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 27rem;
+    height: 27rem;
+    background-color: $white;
+    border-radius: 50%;
+    content: "";
+    opacity: .7;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &:hover:before {
+    position: absolute;
+    width: 31rem;
+    height: 31rem;
+    //transform: translate(-50%, -50%);
+    background-color: $white;
+    border-radius: 50%;
+    content: "";
+    opacity: .7;
+  }
+}
