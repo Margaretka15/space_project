@@ -1,0 +1,40 @@
+$navbar-height: 9rem;
+.navbar {
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  display: flex;
+  width: 60vw;
+
+  height: $navbar-height;
+  background: rgba($white, 0.04);
+  justify-content: space-around;
+  //align-items: center;
+
+  backdrop-filter: blur(40.7742px);
+  //to do: add additional styling for browsers which don't support blur effect
+
+
+  &__link {
+    height: inherit;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.9rem;
+    line-height: $navbar-height;
+    color: $white;
+    text-transform: uppercase;
+
+    //&:last-child {
+    //  margin-right: 10rem;
+    //}
+    &:hover {
+      cursor: pointer;
+      border-bottom: 2px $white solid;
+    }
+
+    span {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+  }
+
+}

@@ -1,12 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
 
-h1, h2, h3 {
-  font-family: 'Bellefair', serif;
+h1, h2, h3, h4, h5 {
   font-weight: 400;
 }
 
-body {
-   font-family: 'Barlow', sans-serif;
+h1, h2, h3, h4 {
+  font-family: 'Bellefair', serif;
 }
+
+h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  color: $white;
+}
+
 //font-family: 'Barlow Condensed', sans-serif;
 // font-family: 'Barlow', sans-serif;
