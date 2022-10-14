@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-    children: React.ReactElement;
+    children: React.ReactElement[];
 }
 
 function Navbar({children} :Props) {
