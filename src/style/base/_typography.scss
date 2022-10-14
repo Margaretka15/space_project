@@ -2,19 +2,58 @@
 
 h1, h2, h3, h4, h5 {
   font-weight: 400;
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
   font-family: 'Bellefair', serif;
 }
 
+h1 {
+  font-size: 15rem;
+}
+h2 {
+  font-size: 10rem;
+}
+h3 {
+  font-size: 5.6rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+}
+
 h5 {
   font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.8rem;
 }
 
 body {
   font-family: 'Barlow', sans-serif;
   color: $white;
+}
+
+.subheading-1 {
+  font-family: 'Bellefair', serif;
+  font-size: 2.8rem;
+  text-transform: uppercase;
+}
+
+.subheading-2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.nav-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.6rem;
+}
+
+.body-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
 }
 
 //font-family: 'Barlow Condensed', sans-serif;

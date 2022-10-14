@@ -1,12 +1,13 @@
 import React from "react";
 
 type Props = {
-    children: React.ReactElement[];
+    children: React.ReactElement[] | React.ReactElement;
+    type: string;
 }
 
-function Navbar({children} :Props) {
+function Navbar({children, type} :Props) {
     return (
-        <nav className="navbar">
+        <nav className={type}>
             {children}
         </nav>);
 }

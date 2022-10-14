@@ -1,0 +1,31 @@
+@import "../../style/base/mixins.scss";
+
+.destination {
+
+  &__title {
+    text-transform: uppercase;
+
+    &--small {
+      margin-bottom: 0;
+    }
+
+    &--big {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  &__text {
+
+  }
+
+  @include respond(desktop) {
+    background-image: url("~/public/assets/destination/background-destination-desktop.jpg");
+  }
+  @include respond(tablet) {
+    background-image: url("~/public/assets/destination/background-destination-tablet.jpg");
+  }
+  @include respond(phone) {
+    background-image: url("~/public/assets/destination/background-destination-mobile.jpg");
+  }
+
+}

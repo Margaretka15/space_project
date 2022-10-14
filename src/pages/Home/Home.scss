@@ -1,21 +1,13 @@
 @import "../../style/base/mixins.scss";
 
 .home {
-  height: 100vh;
-  padding: 1rem;
-  background-size: cover;
-
   &__title {
-    text-transform: uppercase;
-
     &--small {
-      font-size: 2.8rem;
       margin-bottom: 0;
 
     }
 
     &--big {
-      font-size: 15rem;
       margin-top: 2.5rem;
       margin-bottom: 1rem;
 
@@ -23,8 +15,7 @@
   }
 
   &__text {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
+
   }
 
 
