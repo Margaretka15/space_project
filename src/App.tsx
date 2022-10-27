@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import {NavigationLink, Navbar, Logo, Header} from "./layout/Navigation/";
 import Destination from "./pages/Destination/Destination";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Crew from "./pages/Crew/Crew";
+import Technology from "./pages/Technology/Technology";
 
 function App() {
     return (
@@ -23,8 +25,8 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/home" element={<Home/>}/>
                     <Route path="/destination" element={<Destination/>}/>
-                    {/*<Route path="/crew" element={<Crew/>}/>*/}
-                    {/*<Route path="/crew" element={<Crew/>}/>*/}
+                    <Route path="/crew" element={<Crew/>}/>
+                    <Route path="/technology" element={<Technology/>}/>
                 </Routes>
             </BrowserRouter>
 
