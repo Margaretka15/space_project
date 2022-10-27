@@ -1,6 +1,6 @@
 import React from "react";
 import './Home.scss';
-import BigButton from "../../components/BigButton/BigButton";
+import BigButton from "../../components/shared/BigButton/BigButton";
 import {Link} from "react-router-dom";
 
 function Home() {

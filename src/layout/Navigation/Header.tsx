@@ -8,8 +8,6 @@ function Header({children} : Props) {
     return (
         <div className="header">
             <Logo/>
-
-
             {children}
         </div>
     )
