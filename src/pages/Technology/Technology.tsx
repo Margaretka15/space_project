@@ -36,22 +36,22 @@ function Technology() {
             <Step stepNumber={3} label="Space launch 101 "/>
 
             <div className="container--two-columns">
-                <div className="left-column">
+                <div className="left-column flex">
                     <div className="technology__circles-container">
                         {technologies.map((t, index) =>
                             <SmallButton text={(index + 1).toString()}
-                                         actionOnClick={() => setActiveTechnologyID(index)}/>
+                                         actionOnClick={() => setActiveTechnologyID(index)}
+                                         cssClass={activeTechnologyID === index ? "button--small button--small--active" : "button--small"}
+                            />
                         )}
-
                     </div>
-                    {!isLoading && <>
-                      <h5>The technology...</h5>
-                      <h3>{technologies[activeTechnologyID].name}</h3>
+                    {!isLoading ? <div>
+                        {/*  to do: zrobić jedno isLoading, bo po co to dwa razy sprawdzać w sumie xd */}
+                        <h5>The technology...</h5>
+                        <h3>{technologies[activeTechnologyID].name}</h3>
 
-                      <p className="body-text">{technologies[activeTechnologyID].description}</p>
-
-
-                    </>}
+                        <p className="body-text">{technologies[activeTechnologyID].description}</p>
+                    </div> : <Loader/>}
 
                 </div>
                 <div className="right-column">
