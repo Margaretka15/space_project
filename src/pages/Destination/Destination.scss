@@ -5,8 +5,10 @@
   &__title {
     text-transform: uppercase;
 
+
     &--small {
       margin-bottom: 0;
+      position: absolute;
     }
 
     &--big {
