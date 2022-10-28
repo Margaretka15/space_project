@@ -2,11 +2,21 @@
 
 .technology {
 
+  padding-top: 10rem;
+  padding-left: 5rem;
+
+  .container--two-columns {
+    //margin-top: 12rem;
+  }
+
   &__title {
     text-transform: uppercase;
 
     &--small {
       margin-bottom: 0;
+      //position: absolute;
+      //top: 10rem;
+      //left: 10rem;
     }
 
     &--big {
@@ -14,8 +24,19 @@
       margin-bottom: 1rem;
     }
   }
+
   &__text {
 
+  }
+
+  &__circles-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
   }
 
   @include respond(desktop) {
