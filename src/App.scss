@@ -1,8 +1,8 @@
 @import "./style/base/mixins.scss";
 
 .page {
-  height: 100vh;
-  padding: 1rem;
+  min-height: 100vh;
+  padding: 1%;
   background-size: cover;
 
 }

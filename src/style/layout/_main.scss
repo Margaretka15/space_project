@@ -5,6 +5,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(tablet) {
+    flex-direction: column;
+  }
+
   .left-column {
     padding: 6%;
     width: 45vw;
