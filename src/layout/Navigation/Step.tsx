@@ -1,4 +1,5 @@
 import React from "react";
+import "./Step.scss";
 
 type Props = {
     stepNumber: number;
@@ -7,10 +8,10 @@ type Props = {
 
 function Step({stepNumber, label}: Props) {
     return (
-        <div>
-            <h5 className="technology__title technology__title--small">
-                <span>0{stepNumber}</span>
-                {label}
+        <div className="step">
+            <h5>
+                <span className="step__number">0{stepNumber}</span>
+                <span className="step__title">{label}</span>
             </h5>
         </div>
     )

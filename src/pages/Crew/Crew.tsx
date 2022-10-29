@@ -1,9 +1,8 @@
 import React, {useEffect, useState} from "react";
 import './Crew.scss';
-import {IDestination} from "../Destination/interfaces";
 import getData from "../../services/getData/getData";
 import {Navbar} from "../../layout/Navigation";
-import DestinationDetails from "../Destination/DestinationDetails";
+import Step from "../../layout/Navigation/Step";
 
 interface ICrewMember {
     name: "string";
@@ -28,42 +27,36 @@ function Crew() {
         getData("crew", handleData);
     }, [])
 
-
     return (
-        <div className="crew page container--two-columns">
-            <div className="left-column">
-                <h5 className="crew__title crew__title--small"><span>02</span>Meet your crew</h5>
+        <div className="crew page">
+            <Step stepNumber={2} label="Meet your crew"/>
 
-                {!isLoading && <>
-                  <h4>{members[activeMemberID].role}</h4>
-                  <h3>{members[activeMemberID].name}</h3>
-                  <p className="body-text">{members[activeMemberID].bio}</p>
-                  <Navbar type="">
-                      {/*to do: check if destinations.length > 0 before rendering (show loader)*/}
-                      {members.map((d, index) => (
-                          <button
-                              className={activeMemberID === index ? "navbar__link navbar__link--active" : "navbar__link"}
-                              onClick={() => {
-                                  setActiveMemberID(index);
-                              }}>*</button>))}
+            <div className="container--two-columns">
+                <div className="left-column">
 
-                  </Navbar>
-
-                </>}
-
-            </div>
-            <div className="right-column">
-                <div>
-
-
-
-                    {!isLoading &&
-                    <img src={members[activeMemberID].images.png} alt=""/>}
-
-
+                    {!isLoading && <>
+                      <h4>{members[activeMemberID].role}</h4>
+                      <h3>{members[activeMemberID].name}</h3>
+                      <p className="body-text">{members[activeMemberID].bio}</p>
+                      <Navbar type="">
+                          {/*to do: check if destinations.length > 0 before rendering (show loader)*/}
+                          {members.map((d, index) => (
+                              <button
+                                  className={activeMemberID === index ? "navbar__link navbar__link--active" : "navbar__link"}
+                                  onClick={() => {
+                                      setActiveMemberID(index);
+                                  }}>*</button>))}
+                      </Navbar>
+                    </>}
 
                 </div>
+                <div className="right-column">
+                    <div>
+                        {!isLoading &&
+                        <img src={members[activeMemberID].images.png} alt=""/>}
+                    </div>
 
+                </div>
             </div>
         </div>
 

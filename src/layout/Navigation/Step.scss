@@ -1,0 +1,17 @@
+@import "src/style/base/variables";
+.step {
+
+
+
+  &__title {
+    font-weight: normal;
+    color: $white;
+    letter-spacing: 4.72px;
+  }
+
+  &__number {
+    margin-right: 1.5rem;
+    color: $light-grey;
+    font-weight: bold;
+  }
+}
