@@ -1,25 +1,26 @@
-$navbar-height: 9rem;
-.navbar{
-  //position: absolute;
-  display: flex;
-  //right: 0;
-  width: 60vw;
+@import "src/style/base/mixins";
 
+$navbar-height: 9rem;
+
+.navbar {
+  display: flex;
+  width: 60vw;
 
   margin-left: auto;
   background: rgba($white, 0.04);
   justify-content: space-around;
-  //align-items: center;
 
   backdrop-filter: blur(40.7742px);
   //to do: add additional styling for browsers which don't support blur effect
 
 
   &__link {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.9rem;
-    line-height: $navbar-height;
     height: $navbar-height;
+    font: {
+      size: 1.9rem;
+      family: 'Barlow Condensed', sans-serif;
+    }
+    line-height: $navbar-height;
     color: $white;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
@@ -31,16 +32,61 @@ $navbar-height: 9rem;
       cursor: pointer;
       border-bottom: 3px $light-grey solid;
     }
+
     &--active {
       border-bottom: 3px $white solid;
+
       &:hover {
-        border-bottom:  3px $white solid;;
+        border-bottom: 3px $white solid;;
       }
     }
+
     span {
       margin-right: 1rem;
       font-weight: bold;
     }
   }
 
+  &__hamburger {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  @include respond(phone) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    display: none;
+    height: 100vh;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: normal;
+    padding-top: 7rem;
+
+    &__link {
+
+    }
+    //to do: zrobić to ładniej, bo mi się nie podoba
+
+    &__hamburger {
+      position: fixed;
+      right: 2rem;
+      display: block;
+      color: $white;
+      z-index: 15;
+    }
+
+  }
+
+  &--expanded {
+    display: flex;
+  }
 }
+

@@ -1,11 +1,12 @@
-@import "./style/base/mixins.scss";
-
+@import "./style/base/mixins";
+@import "style/base/variables";
 .page {
   min-height: 100vh;
   //padding: 1%;
   background-size: cover;
   padding-top: 10rem;
   padding-left: 5rem;
+
 
 
 }
