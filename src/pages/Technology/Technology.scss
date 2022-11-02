@@ -2,8 +2,6 @@
 
 .technology {
 
-
-
   &__title {
     text-transform: uppercase;
 
@@ -41,12 +39,26 @@
 
   @include respond(desktop) {
     background-image: url("~/public/assets/technology/background-technology-desktop.jpg");
+
   }
   @include respond(tablet) {
+
     background-image: url("~/public/assets/technology/background-technology-tablet.jpg");
+    .flex {
+      flex-direction: column;
+    }
+    &__circles-container {
+      flex-direction: row;
+    }
+
+    .reverse {
+      flex-direction: column-reverse;
+    }
+
   }
   @include respond(phone) {
     background-image: url("~/public/assets/technology/background-technology-mobile.jpg");
+
   }
 
 }

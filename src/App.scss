@@ -1,13 +1,26 @@
 @import "./style/base/mixins";
 @import "style/base/variables";
+
 .page {
   min-height: 100vh;
   //padding: 1%;
+  padding: 10rem 3%;
   background-size: cover;
-  padding-top: 10rem;
-  padding-left: 5rem;
 
-
+  @include respond(tablet) {
+    text-align: center;
+  }
 
 }
 
+
+@include respond(tablet) {
+  html {
+    font-size: 60%;
+  }
+}
+@include respond(phone) {
+  html {
+    font-size: 50%;
+  }
+}

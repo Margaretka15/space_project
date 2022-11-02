@@ -35,7 +35,7 @@ function Technology() {
         <div className="technology page">
             <Step stepNumber={3} label="Space launch 101 "/>
 
-            <div className="container--two-columns">
+            <div className="container--two-columns reverse">
                 <div className="left-column flex">
                     <div className="technology__circles-container">
                         {technologies.map((t, index) =>

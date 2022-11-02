@@ -65,12 +65,29 @@ $navbar-height: 9rem;
     z-index: 11;
     display: none;
     height: 100vh;
-    padding: 2rem;
+    padding: 7rem 2rem 2rem;
     flex-direction: column;
     justify-content: normal;
-    padding-top: 7rem;
 
     &__link {
+      border-right: 3px transparent solid;
+      border-bottom: none;
+      line-height: 5rem;
+      height: fit-content;
+
+      &:hover {
+        cursor: pointer;
+        border-right: 3px $light-grey solid;
+        border-bottom: none;
+      }
+
+      &--active {
+        border-right: 3px $white solid;
+
+        &:hover {
+          border-right: 3px $white solid;
+        }
+      }
 
     }
     //to do: zrobić to ładniej, bo mi się nie podoba
@@ -78,9 +95,9 @@ $navbar-height: 9rem;
     &__hamburger {
       position: fixed;
       right: 2rem;
+      z-index: 15;
       display: block;
       color: $white;
-      z-index: 15;
     }
 
   }
