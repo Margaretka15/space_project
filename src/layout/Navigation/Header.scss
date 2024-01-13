@@ -1,3 +1,4 @@
+@import "src/style/base/mixins";
 .header {
   position: absolute;
   top: 2rem;
@@ -5,9 +6,11 @@
   width: 100%;
   height: 9rem;
   flex-wrap: wrap;
-&__logo {
-  cursor: pointer;
-}
+
+  &__logo {
+    cursor: pointer;
+  }
+
   &__logo-section {
     position: absolute;
     display: flex;
@@ -26,5 +29,10 @@
 
   }
 
+  @include respond(tablet) {
+    &__line {
+      display: none;
+    }
+  }
 
 }

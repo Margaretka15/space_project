@@ -20,6 +20,11 @@
 
   }
 
+  .left-column {
+    display: flex;
+    justify-content: center;
+  }
+
   @include respond(desktop) {
     background-image: url("~/public/assets/destination/background-destination-desktop.jpg");
   }
